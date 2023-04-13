@@ -8,9 +8,9 @@ var router = express.Router();
 /* GET home page. */
 router.get("/", async function(req, res, next) {
     const top10 = await Resultat.findAll({order:[['totalscore','DESC']],limit: 10});
-  if (top10 == null) {
-    res.status(StatusCodes.StatusCodes.NOT_FOUND).json("No result found");
-  }
+//   if (top10 || top10.keys(obj).length === 0) {
+//     res.status(StatusCodes.StatusCodes.NOT_FOUND).json("No result found");
+//   }
   res.status(StatusCodes.StatusCodes.OK).json({top10});
 });
 
