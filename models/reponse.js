@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.Reponse.BelongsTo(models.Question)
+      models.Reponse.belongsTo(models.Question)
     }
   }
   Reponse.init({
@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     isCorrect: DataTypes.BOOLEAN
   }, {
     sequelize,
+    timestamps : false,
     modelName: 'Reponse',
   });
   return Reponse;
