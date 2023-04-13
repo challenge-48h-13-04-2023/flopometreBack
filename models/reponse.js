@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Reponse.init({
     value: DataTypes.STRING,
-    isCorrect: DataTypes.BOOLEAN
+    nbDePoints: DataTypes.INTEGER,
+    idQuestion: DataTypes.INTEGER
   }, {
     sequelize,
     timestamps : false,

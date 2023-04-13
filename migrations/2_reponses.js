@@ -16,7 +16,7 @@ module.exports = {
       nbDePoints: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        defaultValue: 0,
+        defaultValue: false,
       },
       idQuestion: {
         allowNull: false,
@@ -27,12 +27,29 @@ module.exports = {
         },
       },
     });
-    // return queryInterface.bulkInsert("Reponses", [
-    //   {
-    //     value: "TODO",
-    //     isCorrect: false,
-    //   },
-    // ]);
+    // console.log("1");
+    // let test;
+    // try {
+    // test = (await queryInterface.sequelize.query("select id from Questions where value LIKE 'Quel est ton réseau social favori?'", { type: queryInterface.sequelize.QueryTypes.SELECT }))[0].id;
+        
+    // } catch (error) {
+    //     console.log(error)
+    // }
+    // console.log(test);
+    // console.log("2");
+    const resSocialId = (await queryInterface.sequelize.query("select id from Questions where value LIKE 'Quel est ton réseau social favori?'", { type: queryInterface.sequelize.QueryTypes.SELECT }))[0].id;
+    return queryInterface.bulkInsert("Reponses", [
+      {
+        value: "Tiktok",
+        nbDePoints: 0,
+        idQuestion: resSocialId
+    },
+      {
+        value: "Twitter",
+        nbDePoints: 2,
+        idQuestion: resSocialId
+    },
+    ]);
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("Questions");
