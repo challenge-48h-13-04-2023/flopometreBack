@@ -7,8 +7,4 @@ router.get('/', function(req, res, next) {
   res.status(StatusCodes.StatusCodes.OK).json("test");
 });
 
-router.get('/startquiz', function(req, res, next) {
-  res.status(StatusCodes.StatusCodes.OK).json("test");
-});
-
 module.exports = router;
