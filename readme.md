@@ -1,3 +1,35 @@
+## Installation
+
+Use the package manager [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install dependecies.
+
+```bash
+npm install
+```
+
+Create a .env file in the root directory and add the following variables:
+
+```bash
+DB_USER='root'
+DB_PASSWORD=''
+DB_NAME='flop_db'
+PORT='3000'
+```
+
+Create your database with:
+```bash
+npx sequelize-cli db:create
+```
+Create your scheme with:
+```bash
+npx sequelize-cli db:migrate
+```
+
+## Usage
+To start the server run:
+```bash
+npm start
+```
+
 # Routes usage
 ## Questions Routes
 ### Get Questions
