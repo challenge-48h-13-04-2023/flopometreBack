@@ -72,6 +72,17 @@ example result:
 }
 ```
 ## Leaderboard Routes
+### Add score to leaderboard
+```bash
+PUT /resultat/add
+```
+example input
+```JSON
+{
+    "username": "addd",
+    "totalScore": 7
+}
+```
 ### Get TOP 10
 ```bash
 GET /resultat/
