@@ -16,11 +16,13 @@ router.get("/", async function(req, res, next) {
 });
 
 router.put("/add", async function(req, res, next) {
+  if(req.body.username == null || req.body.totalscore == null) {
+    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Missing username or totalscore");
+  }
   const newUsername = req.body.username;
   const newTotalScore = req.body.totalscore;
 
-  const newScore = Resultat.build({ username : newUsername, totalscore : newTotalScore });
-
+  const newScore = Resultat.build({ username : newUsername, totalScore : newTotalScore });
   const result = await newScore.save();
   res.status(StatusCodes.StatusCodes.OK).json(result);
 });
