@@ -17,7 +17,7 @@ router.get("/serve10", async function(req, res, next) {
         await questDto.loadReponses(questions[i].id)
         questionsRep.push(questDto);
     }
-  res.status(StatusCodes.StatusCodes.OK).json({questionsRep});
+  res.status(StatusCodes.StatusCodes.OK).json(questionsRep);
 });
 
 module.exports = router;
