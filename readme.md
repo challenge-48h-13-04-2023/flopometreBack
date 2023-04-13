@@ -1,4 +1,9 @@
 # Routes usage
+## Questions Routes
+### Get Questions
+todo
+### Get Reponses to Questions
+todo
 ## Leaderboard Routes
 ### Get TOP 10
 ```bash
