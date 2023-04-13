@@ -38,38 +38,36 @@ GET /question/serve10
 ```
 example result: 
 ```json
-{
-    "questionsRep": [
-        {
-            "id": 1,
-            "value": "Quel est ton réseau social favori?",
-            "reponses": [
-                {
-                    "id": 1,
-                    "value": "Tiktok",
-                    "nbDePoints": 0,
-                    "idQuestion": 1
-                },
-                {
-                    "id": 2,
-                    "value": "Twitter",
-                    "nbDePoints": 2,
-                    "idQuestion": 1
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "value": "Quel émission regardes-tu pour te divertir?",
-            "reponses": []
-        },
-        {
-            "id": 3,
-            "value": "Qui va gagner le ballon d'or 2023?",
-            "reponses": []
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "value": "Quel est ton réseau social favori?",
+        "reponses": [
+            {
+                "id": 1,
+                "value": "Tiktok",
+                "nbDePoints": 0,
+                "idQuestion": 1
+            },
+            {
+                "id": 2,
+                "value": "Twitter",
+                "nbDePoints": 2,
+                "idQuestion": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "value": "Qui va gagner le ballon d'or 2023?",
+        "reponses": []
+    },
+    {
+        "id": 2,
+        "value": "Quel émission regardes-tu pour te divertir?",
+        "reponses": []
+    }
+]
 ```
 ## Leaderboard Routes
 ### Add score to leaderboard
@@ -89,48 +87,46 @@ GET /resultat/
 ```
 example result: 
 ```json
-{
-    "top10": [
-        {
-            "username": "test1",
-            "totalScore": 1
-        },
-        {
-            "username": "test2",
-            "totalScore": 2
-        },
-        {
-            "username": "test3",
-            "totalScore": 3
-        },
-        {
-            "username": "test4",
-            "totalScore": 4
-        },
-        {
-            "username": "test5",
-            "totalScore": 5
-        },
-        {
-            "username": "test6",
-            "totalScore": 6
-        },
-        {
-            "username": "test7",
-            "totalScore": 7
-        },
-        {
-            "username": "test8",
-            "totalScore": 8
-        },
-        {
-            "username": "test9",
-            "totalScore": 9
-        },
-        {
-            "username": "test10",
-            "totalScore": 10
-        }
-    ]
-}
+[
+    {
+        "username": "User 0",
+        "totalScore": 0
+    },
+    {
+        "username": "testAdd",
+        "totalScore": 0
+    },
+    {
+        "username": "testAddd",
+        "totalScore": 0
+    },
+    {
+        "username": "User 1",
+        "totalScore": 1
+    },
+    {
+        "username": "User 2",
+        "totalScore": 2
+    },
+    {
+        "username": "User 3",
+        "totalScore": 3
+    },
+    {
+        "username": "User 4",
+        "totalScore": 4
+    },
+    {
+        "username": "User 5",
+        "totalScore": 5
+    },
+    {
+        "username": "User 6",
+        "totalScore": 6
+    },
+    {
+        "username": "addd",
+        "totalScore": 7
+    }
+]
 ```
