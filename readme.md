@@ -32,17 +32,52 @@ npm start
 
 # Routes usage
 ## Questions Routes
-### Get Questions
-todo
-### Get Reponses to Questions
-todo
+### Get Questions + Reponses
+```bash
+GET /question/serve10
+```
+example result: 
+```json
+{
+    "questionsRep": [
+        {
+            "id": 1,
+            "value": "Quel est ton réseau social favori?",
+            "reponses": [
+                {
+                    "id": 1,
+                    "value": "Tiktok",
+                    "nbDePoints": 0,
+                    "idQuestion": 1
+                },
+                {
+                    "id": 2,
+                    "value": "Twitter",
+                    "nbDePoints": 2,
+                    "idQuestion": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "value": "Quel émission regardes-tu pour te divertir?",
+            "reponses": []
+        },
+        {
+            "id": 3,
+            "value": "Qui va gagner le ballon d'or 2023?",
+            "reponses": []
+        }
+    ]
+}
+```
 ## Leaderboard Routes
 ### Get TOP 10
 ```bash
 GET /resultat/
 ```
 example result: 
-```
+```json
 {
     "top10": [
         {
