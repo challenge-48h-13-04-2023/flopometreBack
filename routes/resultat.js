@@ -18,6 +18,12 @@ router.get("/", async function(req, res, next) {
 router.put("/add", async function(req, res, next) {
   if(req.body.username == null || req.body.totalscore == null) {
     res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Missing username or totalscore");
+    return;
+  }
+  const usernameExists = await Resultat.findOne({where: {username: req.body.username}});
+  if (usernameExists != null) {
+    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Username is already on the leaderboard");
+    return;
   }
   const newUsername = req.body.username;
   const newTotalScore = req.body.totalscore;
