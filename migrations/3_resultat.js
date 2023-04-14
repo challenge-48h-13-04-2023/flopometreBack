@@ -24,9 +24,59 @@ module.exports = {
     });
     return queryInterface.bulkInsert("Resultats", [
       {
-        prenom: "test",
-        nom: "test",
-        totalScore: 24,
+        prenom: "Michel",
+        nom: "Floppeur",
+        totalScore: 98,
+       },
+       {
+        prenom: "Yvick",
+        nom: "Letexier",
+        totalScore: 6,
+       },
+       {
+        prenom: "Jonathan",
+        nom: "Cohen",
+        totalScore: 16,
+       },
+       {
+        prenom: "Franch",
+        nom: "Dubosc",
+        totalScore: 62,
+       },
+       {
+        prenom: "Asterion",
+        nom: "Lebon",
+        totalScore: 45,
+       },
+       {
+        prenom: "Dylan",
+        nom: "CulJaune",
+        totalScore: 38,
+       },
+       {
+        prenom: "Tibo",
+        nom: "Inshape",
+        totalScore: 90,
+       },
+       {
+        prenom: "Ismaël",
+        nom: "Hacquin",
+        totalScore: 4,
+       },
+       {
+        prenom: "Nicolas",
+        nom: "Chatain",
+        totalScore: 5,
+       },
+       {
+        prenom: "Nino",
+        nom: "Didier",
+        totalScore: 6,
+       },
+       {
+        prenom: "Jaleel",
+        nom: "Aouadj",
+        totalScore: 7,
        }
     ]);
   },

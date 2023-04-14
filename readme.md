@@ -32,7 +32,7 @@ npm start
 
 # Routes usage
 ## Questions Routes
-### Get Questions + Reponses + score total possible
+### Get 10 Questions + Reponses + score total possible
 ```bash
 GET /question/serve10
 ```

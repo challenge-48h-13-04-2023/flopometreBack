@@ -14,14 +14,4 @@ router.get('/startquiz', function(req, res, next) {
   res.status(StatusCodes.StatusCodes.FORBIDDEN).json("TODO");
 });
 
-router.get('/username_exists/:username', async function(req, res, next) {
-  const username = req.params.username;
-  const result = await Resultat.findOne({where: {username: username}});
-  var found = false;
-  if (result != null) {
-    found = true;
-  }
-  res.status(StatusCodes.StatusCodes.OK).json(found);
-});
-
 module.exports = router;
