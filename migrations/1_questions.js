@@ -24,6 +24,9 @@ module.exports = {
       {
         value: "Qui va gagner le ballon d'or 2023?"
       },
+      {
+        value: "Un rap contenders en 2 contre 2 se présente, vous n'avez pas de coéquipier.\n Qui choisissez-vous parmi ces choix ?"
+      }
     ]);
   },
   async down(queryInterface, Sequelize) {

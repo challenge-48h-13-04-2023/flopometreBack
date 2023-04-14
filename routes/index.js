@@ -7,11 +7,11 @@ const Resultat = require("../models/resultat")(sequelize, Sequelize.DataTypes,Se
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.status(StatusCodes.StatusCodes.OK).json("test");
+  res.status(StatusCodes.StatusCodes.FORBIDDEN).json("TODO");
 });
 
 router.get('/startquiz', function(req, res, next) {
-  res.status(StatusCodes.StatusCodes.OK).json("test");
+  res.status(StatusCodes.StatusCodes.FORBIDDEN).json("TODO");
 });
 
 router.get('/username_exists/:username', async function(req, res, next) {
