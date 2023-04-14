@@ -368,3 +368,94 @@ example result :
     "cringeMax": 3
 }
 ```
+##Leaderboard routes
+###Get top 10
+```bash
+GET /resultat/
+```
+example result :
+```JSON
+[
+    {
+        "id": 12,
+        "prenom": "sbss",
+        "nom": "nombnobsm",
+        "totalScore": 5
+    },
+    {
+        "id": 15,
+        "prenom": "sbss",
+        "nom": "qqqqsd",
+        "totalScore": 12
+    },
+    {
+        "id": 11,
+        "prenom": "sss",
+        "nom": "nombnobm",
+        "totalScore": 13
+    },
+    {
+        "id": 2,
+        "prenom": "Truc",
+        "nom": "Machin",
+        "totalScore": 23
+    },
+    {
+        "id": 1,
+        "prenom": "test",
+        "nom": "test",
+        "totalScore": 24
+    },
+    {
+        "id": 3,
+        "prenom": "tructruc",
+        "nom": "nomnom",
+        "totalScore": 36
+    },
+    {
+        "id": 4,
+        "prenom": "tructrucc",
+        "nom": "nomnom",
+        "totalScore": 36
+    },
+    {
+        "id": 5,
+        "prenom": "tructrcucc",
+        "nom": "nomnom",
+        "totalScore": 36
+    },
+    {
+        "id": 6,
+        "prenom": "tructrcuccc",
+        "nom": "nomnom",
+        "totalScore": 36
+    },
+    {
+        "id": 7,
+        "prenom": "tructrcuccsc",
+        "nom": "nomnom",
+        "totalScore": 36
+    }
+]
+```
+###Add result to leaderboard
+```bash
+PUT /resultat/add
+```
+example input:
+```JSON
+{
+    "nom": "Machin",
+    "prenom": "Truc",
+    "totalscore" : 23
+}
+```
+example succesful output:
+```JSON
+{
+    "id": 2,
+    "prenom": "Truc",
+    "nom": "Machin",
+    "totalScore": 23
+}
+```
