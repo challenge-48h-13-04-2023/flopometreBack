@@ -32,7 +32,7 @@ npm start
 
 # Routes usage
 ## Questions Routes
-### Get Questions + Reponses
+### Get Questions + Reponses + score total possible
 ```bash
 GET /question/serve10
 ```
@@ -40,93 +40,331 @@ example result:
 ```json
 [
     {
+        "id": 4,
+        "value": "Mise en situation : Tu parles tranquillement à ton pote, et là il ne comprend pas ce que tu dis. Soudainement il te balance un « quoi ? ». Que réponds-tu ?",
+        "reponses": [
+            {
+                "id": 5,
+                "value": "Feur!",
+                "nbDePoints": 1,
+                "idQuestion": 4
+            },
+            {
+                "id": 6,
+                "value": "Quoicoubeh",
+                "nbDePoints": 2,
+                "idQuestion": 4
+            },
+            {
+                "id": 7,
+                "value": "Quoicoubaka",
+                "nbDePoints": 3,
+                "idQuestion": 4
+            },
+            {
+                "id": 8,
+                "value": "*Tu répètes ta phrase*",
+                "nbDePoints": 0,
+                "idQuestion": 4
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "id": 13,
+        "value": "Mise en situation : Tu dois rentrer chez toi après une soirée (très) arrosée, tu dois choisir un taxi. Qui choisis tu ?",
+        "reponses": [
+            {
+                "id": 45,
+                "value": "GMK",
+                "nbDePoints": 2,
+                "idQuestion": 13
+            },
+            {
+                "id": 46,
+                "value": "Un taxi lambda",
+                "nbDePoints": 1,
+                "idQuestion": 13
+            },
+            {
+                "id": 47,
+                "value": "Pierre Palmade",
+                "nbDePoints": 3,
+                "idQuestion": 13
+            },
+            {
+                "id": 48,
+                "value": "Tu rentres à pieds",
+                "nbDePoints": 0,
+                "idQuestion": 13
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "id": 6,
+        "value": "Mise en situation : Tu vas au cinéma avec ta meuf, tu as le choix entre 4 films. Que choisis-tu ?",
+        "reponses": [
+            {
+                "id": 21,
+                "value": "Les Gardiens de la Galaxie",
+                "nbDePoints": 0,
+                "idQuestion": 6
+            },
+            {
+                "id": 22,
+                "value": "Super Mario Bros. le film",
+                "nbDePoints": 1,
+                "idQuestion": 6
+            },
+            {
+                "id": 23,
+                "value": "Fast and Furious 46",
+                "nbDePoints": 2,
+                "idQuestion": 6
+            },
+            {
+                "id": 24,
+                "value": "Astérix et Obélix : L'Empire du Milieu",
+                "nbDePoints": 3,
+                "idQuestion": 6
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "id": 11,
+        "value": "Tu sors de soirée et avec ta bande d'amis vous avez super faim. Que proposes tu ?",
+        "reponses": [
+            {
+                "id": 37,
+                "value": "On va manger?",
+                "nbDePoints": 0,
+                "idQuestion": 11
+            },
+            {
+                "id": 38,
+                "value": "Allons fluncher!",
+                "nbDePoints": 2,
+                "idQuestion": 11
+            },
+            {
+                "id": 39,
+                "value": "J'ai la quoicoudalle!",
+                "nbDePoints": 3,
+                "idQuestion": 11
+            },
+            {
+                "id": 40,
+                "value": "On va manger un morceau?",
+                "nbDePoints": 1,
+                "idQuestion": 11
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "id": 8,
+        "value": "As-tu déjà fêté ton anniversaire au Mcdo/Quick ?",
+        "reponses": [
+            {
+                "id": 29,
+                "value": "Oui",
+                "nbDePoints": 1,
+                "idQuestion": 8
+            },
+            {
+                "id": 30,
+                "value": "Non",
+                "nbDePoints": 0,
+                "idQuestion": 8
+            }
+        ],
+        "cringeMax": 1
+    },
+    {
         "id": 1,
         "value": "Quel est ton réseau social favori?",
         "reponses": [
             {
-                "id": 1,
-                "value": "Tiktok",
-                "nbDePoints": 0,
+                "id": 13,
+                "value": "Facebook",
+                "nbDePoints": 3,
                 "idQuestion": 1
             },
             {
-                "id": 2,
-                "value": "Twitter",
+                "id": 14,
+                "value": "Tiktok",
+                "nbDePoints": 1,
+                "idQuestion": 1
+            },
+            {
+                "id": 15,
+                "value": "Pinterest",
                 "nbDePoints": 2,
                 "idQuestion": 1
+            },
+            {
+                "id": 16,
+                "value": "BeReal",
+                "nbDePoints": 0,
+                "idQuestion": 1
             }
-        ]
+        ],
+        "cringeMax": 3
     },
     {
-        "id": 3,
-        "value": "Qui va gagner le ballon d'or 2023?",
-        "reponses": []
+        "id": 9,
+        "value": "Quel est ton fast-food préféré ?",
+        "reponses": [
+            {
+                "id": 31,
+                "value": "Five Guys",
+                "nbDePoints": 0,
+                "idQuestion": 9
+            },
+            {
+                "id": 32,
+                "value": "Flunch",
+                "nbDePoints": 3,
+                "idQuestion": 9
+            },
+            {
+                "id": 33,
+                "value": "Burger King",
+                "nbDePoints": 1,
+                "idQuestion": 9
+            },
+            {
+                "id": 34,
+                "value": "Quick",
+                "nbDePoints": 2,
+                "idQuestion": 9
+            }
+        ],
+        "cringeMax": 3
     },
     {
-        "id": 2,
-        "value": "Quel émission regardes-tu pour te divertir?",
-        "reponses": []
+        "id": 5,
+        "value": "Quel est ton streamer préféré ?",
+        "reponses": [
+            {
+                "id": 17,
+                "value": "Doigby",
+                "nbDePoints": 1,
+                "idQuestion": 5
+            },
+            {
+                "id": 18,
+                "value": "Asterion",
+                "nbDePoints": 3,
+                "idQuestion": 5
+            },
+            {
+                "id": 19,
+                "value": "Grimkujow",
+                "nbDePoints": 2,
+                "idQuestion": 5
+            },
+            {
+                "id": 20,
+                "value": "Loupiote3",
+                "nbDePoints": 0,
+                "idQuestion": 5
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "id": 10,
+        "value": "Tes potes te trouvent généralement drôle ?",
+        "reponses": [
+            {
+                "id": 35,
+                "value": "Oui",
+                "nbDePoints": 0,
+                "idQuestion": 10
+            },
+            {
+                "id": 36,
+                "value": "Non",
+                "nbDePoints": 1,
+                "idQuestion": 10
+            }
+        ],
+        "cringeMax": 1
+    },
+    {
+        "id": 12,
+        "value": "Quel est ton humoriste favori ? ",
+        "reponses": [
+            {
+                "id": 41,
+                "value": "Jonathan Cohen",
+                "nbDePoints": 0,
+                "idQuestion": 12
+            },
+            {
+                "id": 42,
+                "value": "Norman",
+                "nbDePoints": 2,
+                "idQuestion": 12
+            },
+            {
+                "id": 43,
+                "value": "Franck Dubosc",
+                "nbDePoints": 1,
+                "idQuestion": 12
+            },
+            {
+                "id": 44,
+                "value": "Kev Adams",
+                "nbDePoints": 3,
+                "idQuestion": 12
+            }
+        ],
+        "cringeMax": 3
+    },
+    {
+        "totalCringeMax": 26
     }
 ]
 ```
-## Leaderboard Routes
-### Add score to leaderboard
+###Get question by id
 ```bash
-PUT /resultat/add
+GET /question/getbyid/{id}
 ```
-example input
+example result :
 ```JSON
 {
-    "username": "addd",
-    "totalScore": 7
+    "id": 1,
+    "value": "Quel est ton réseau social favori?",
+    "reponses": [
+        {
+            "id": 13,
+            "value": "Facebook",
+            "nbDePoints": 3,
+            "idQuestion": 1
+        },
+        {
+            "id": 14,
+            "value": "Tiktok",
+            "nbDePoints": 1,
+            "idQuestion": 1
+        },
+        {
+            "id": 15,
+            "value": "Pinterest",
+            "nbDePoints": 2,
+            "idQuestion": 1
+        },
+        {
+            "id": 16,
+            "value": "BeReal",
+            "nbDePoints": 0,
+            "idQuestion": 1
+        }
+    ],
+    "cringeMax": 3
 }
-```
-### Get TOP 10
-```bash
-GET /resultat/
-```
-example result: 
-```json
-[
-    {
-        "username": "User 0",
-        "totalScore": 0
-    },
-    {
-        "username": "testAdd",
-        "totalScore": 0
-    },
-    {
-        "username": "testAddd",
-        "totalScore": 0
-    },
-    {
-        "username": "User 1",
-        "totalScore": 1
-    },
-    {
-        "username": "User 2",
-        "totalScore": 2
-    },
-    {
-        "username": "User 3",
-        "totalScore": 3
-    },
-    {
-        "username": "User 4",
-        "totalScore": 4
-    },
-    {
-        "username": "User 5",
-        "totalScore": 5
-    },
-    {
-        "username": "User 6",
-        "totalScore": 6
-    },
-    {
-        "username": "addd",
-        "totalScore": 7
-    }
-]
 ```
