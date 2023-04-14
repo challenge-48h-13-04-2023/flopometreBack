@@ -3,6 +3,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const cors = require('cors');
+
 var indexRouter = require('./routes/index');
 var resultat = require('./routes/resultat');
 var question = require('./routes/question');
@@ -14,8 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', indexRouter);
-app.use('/resultat', resultat);
-app.use('/question', question);
+app.use('/', indexRouter, cors());
+app.use('/resultat', resultat, cors());
+app.use('/question', question, cors());
 
 module.exports = app;
