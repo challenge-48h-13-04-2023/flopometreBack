@@ -19,6 +19,8 @@ router.get("/serve10", async function (req, res, next) {
 
   const questionsRep = [];
 
+  let totalCringeMax = 0
+
   for (i = 0; i < questions.length; i++) {
     questDto = new QuestionDTO(questions[i]);
     await questDto.loadReponses(questions[i].id);
@@ -29,8 +31,10 @@ router.get("/serve10", async function (req, res, next) {
       }
     }
     questDto.cringeMax = cringeHighest;
+    totalCringeMax += cringeHighest;
     questionsRep.push(questDto);
   }
+  questionsRep.push({totalCringeMax : totalCringeMax});
 
   res.status(StatusCodes.StatusCodes.OK).json(questionsRep);
 });
