@@ -13,7 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Resultat.init({
-    username: {type: DataTypes.STRING, primaryKey: true},
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    prenom: DataTypes.STRING,
+    nom: DataTypes.STRING,
     totalScore: DataTypes.INTEGER
   }, {
     sequelize,

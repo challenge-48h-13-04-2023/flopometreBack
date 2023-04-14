@@ -9,28 +9,32 @@ var router = express.Router();
 /* GET home page. */
 router.get("/", async function(req, res, next) {
     const top10 = await Resultat.findAll({order:[['totalscore','ASC']],limit: 10});
-//   if (top10 || top10.keys(obj).length === 0) {
-//     res.status(StatusCodes.StatusCodes.NOT_FOUND).json("No result found");
-//   }
   res.status(StatusCodes.StatusCodes.OK).json(top10);
 });
 
 router.put("/add", async function(req, res, next) {
-  if(req.body.username == null || req.body.totalscore == null) {
-    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Missing username or totalscore");
+  if(req.body.prenom == null || req.body.nom == null || req.body.totalscore == null) {
+    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Missing nom, prenom or totalscore");
     return;
   }
-  const usernameExists = await Resultat.findOne({where: {username: req.body.username}});
-  if (usernameExists != null) {
-    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json("Username is already on the leaderboard");
-    return;
-  }
-  const newUsername = req.body.username;
+  const newNom = req.body.nom;
+  const newPrenom = req.body.prenom;
   const newTotalScore = req.body.totalscore;
 
-  const newScore = Resultat.build({ username : newUsername, totalScore : newTotalScore });
+  const playerExists = await Resultat.findOne({where: {nom: newNom, prenom: newPrenom}});
+  if (playerExists) {
+    res.status(StatusCodes.StatusCodes.BAD_REQUEST).json(newPrenom + " " + newNom + " is already on the leaderboard");
+    return;
+  }
+
+  const newScore = Resultat.build({ prenom : newPrenom, nom : newNom, totalScore : newTotalScore });
   const result = await newScore.save();
-  res.status(StatusCodes.StatusCodes.OK).json(result);
+  if (result) {
+    res.status(StatusCodes.StatusCodes.OK).json(result);
+  }
+  else{
+    res.status(StatusCodes.StatusCodes.INTERNAL_SERVER_ERROR).json("Error while saving the score");
+  }
 });
 
 module.exports = router;

@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Question.init({
-    value: DataTypes.STRING
+    value: DataTypes.STRING,
+    image_path: {type: DataTypes.STRING, allowNull: true}
   }, {
     sequelize,
     timestamps : false,
