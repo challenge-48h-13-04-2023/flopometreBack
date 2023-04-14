@@ -377,64 +377,64 @@ example result :
 ```JSON
 [
     {
-        "id": 12,
-        "prenom": "sbss",
-        "nom": "nombnobsm",
+        "id": 8,
+        "prenom": "Ismaël",
+        "nom": "Hacquin",
+        "totalScore": 4
+    },
+    {
+        "id": 9,
+        "prenom": "Nicolas",
+        "nom": "Chatain",
         "totalScore": 5
     },
     {
-        "id": 15,
-        "prenom": "sbss",
-        "nom": "qqqqsd",
-        "totalScore": 12
+        "id": 2,
+        "prenom": "Yvick",
+        "nom": "Letexier",
+        "totalScore": 6
+    },
+    {
+        "id": 10,
+        "prenom": "Nino",
+        "nom": "Didier",
+        "totalScore": 6
     },
     {
         "id": 11,
-        "prenom": "sss",
-        "nom": "nombnobm",
-        "totalScore": 13
-    },
-    {
-        "id": 2,
-        "prenom": "Truc",
-        "nom": "Machin",
-        "totalScore": 23
-    },
-    {
-        "id": 1,
-        "prenom": "test",
-        "nom": "test",
-        "totalScore": 24
+        "prenom": "Jaleel",
+        "nom": "Aouadj",
+        "totalScore": 7
     },
     {
         "id": 3,
-        "prenom": "tructruc",
-        "nom": "nomnom",
-        "totalScore": 36
-    },
-    {
-        "id": 4,
-        "prenom": "tructrucc",
-        "nom": "nomnom",
-        "totalScore": 36
-    },
-    {
-        "id": 5,
-        "prenom": "tructrcucc",
-        "nom": "nomnom",
-        "totalScore": 36
+        "prenom": "Jonathan",
+        "nom": "Cohen",
+        "totalScore": 16
     },
     {
         "id": 6,
-        "prenom": "tructrcuccc",
-        "nom": "nomnom",
-        "totalScore": 36
+        "prenom": "Dylan",
+        "nom": "CulJaune",
+        "totalScore": 38
+    },
+    {
+        "id": 5,
+        "prenom": "Asterion",
+        "nom": "Lebon",
+        "totalScore": 45
+    },
+    {
+        "id": 4,
+        "prenom": "Franch",
+        "nom": "Dubosc",
+        "totalScore": 62
     },
     {
         "id": 7,
-        "prenom": "tructrcuccsc",
-        "nom": "nomnom",
-        "totalScore": 36
+        "prenom": "Tibo",
+        "nom": "Inshape",
+        "totalScore": 90
     }
 ]
 ```
