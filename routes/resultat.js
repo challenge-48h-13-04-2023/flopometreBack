@@ -9,7 +9,7 @@ var router = express.Router();
 /* GET home page. */
 router.get("/", async function(req, res, next) {
     const top10 = await Resultat.findAll({order:[['totalscore','ASC']],limit: 10});
-  res.status(StatusCodes.StatusCodes.OK).json(top10);
+  res.status(StatusCodes.StatusCodes.OK).json(top10.reverse());
 });
 
 router.put("/add", async function(req, res, next) {
